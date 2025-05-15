@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Tab on Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .dropdown-menu {
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .user-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-purple-600">Tab on Fashion</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-purple-600">Home</a>
+                    <a href="shop.html" class="text-gray-600 hover:text-purple-600">Shop</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="jobs.html" class="text-gray-600 hover:text-purple-600">Jobs</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-purple-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="w-48 px-4 py-1 rounded-full border focus:outline-none focus:border-purple-500">
+                    </div>
+                    <a href="#" class="text-gray-600 hover:text-purple-600 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                    </a>
+                    <div class="relative user-dropdown">
+                        <button class="text-gray-600 hover:text-purple-600 p-2">
+                            <i class="fas fa-user text-xl"></i>
+                        </button>
+                        <div class="dropdown-menu absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                            <a href="login.html" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-sign-in-alt mr-2"></i>Login
+                            </a>
+                            <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-user-circle mr-2"></i>Profile
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-history mr-2"></i>Order History
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <div class="pt-20 max-w-7xl mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-purple-600">Home</a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <span class="mx-2 text-gray-400">/</span>
+                        <a href="shop.html" class="text-gray-600 hover:text-purple-600">Shop</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <span class="mx-2 text-gray-400">/</span>
+                        <span class="text-gray-500">Premium Cotton T-Shirt</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Product Images -->
+            <div class="w-full md:w-1/2">
+                <div class="mb-4">
+                    <img src="https://placehold.co/600x600" alt="Product" class="w-full rounded-lg">
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <img src="https://placehold.co/150x150" alt="Product thumbnail" class="w-full rounded-lg cursor-pointer">
+                    <img src="https://placehold.co/150x150" alt="Product thumbnail" class="w-full rounded-lg cursor-pointer">
+                    <img src="https://placehold.co/150x150" alt="Product thumbnail" class="w-full rounded-lg cursor-pointer">
+                    <img src="https://placehold.co/150x150" alt="Product thumbnail" class="w-full rounded-lg cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="w-full md:w-1/2">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Premium Cotton T-Shirt</h1>
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="ml-2 text-gray-600">(4.5) - 128 Reviews</span>
+                </div>
+                <p class="text-2xl text-gray-900 mb-6">$29.99</p>
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-2">Description</h2>
+                    <p class="text-gray-600">This premium cotton t-shirt is made from 100% organic cotton, providing ultimate comfort and style. Perfect for casual wear or any occasion, it features a classic fit and superior quality that lasts.</p>
+                </div>
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-2">Select Size</h2>
+                    <div class="grid grid-cols-5 gap-2">
+                        <button class="p-2 border rounded-lg hover:bg-purple-100">XS</button>
+                        <button class="p-2 border rounded-lg hover:bg-purple-100">S</button>
+                        <button class="p-2 border rounded-lg bg-purple-100">M</button>
+                        <button class="p-2 border rounded-lg hover:bg-purple-100">L</button>
+                        <button class="p-2 border rounded-lg hover:bg-purple-100">XL</button>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-2">Select Color</h2>
+                    <div class="flex space-x-2">
+                        <button class="w-8 h-8 rounded-full bg-black"></button>
+                        <button class="w-8 h-8 rounded-full bg-blue-500"></button>
+                        <button class="w-8 h-8 rounded-full bg-red-500"></button>
+                        <button class="w-8 h-8 rounded-full bg-gray-500"></button>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-2">Quantity</h2>
+                    <div class="flex items-center space-x-4">
+                        <button class="px-3 py-1 border rounded-lg">-</button>
+                        <span>1</span>
+                        <button class="px-3 py-1 border rounded-lg">+</button>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="flex-1 bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    <button class="px-4 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="mt-8 border-t pt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-truck text-purple-600 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Free Shipping</h3>
+                                <p class="text-sm text-gray-600">On orders over $50</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-undo text-purple-600 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Easy Returns</h3>
+                                <p class="text-sm text-gray-600">30-day return policy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-purple-600 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Secure Payment</h3>
+                                <p class="text-sm text-gray-600">100% secure checkout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="mt-12">
+            <div class="border-b">
+                <nav class="flex space-x-8">
+                    <button class="border-b-2 border-purple-600 py-4 px-1 text-purple-600">Description</button>
+                    <button class="py-4 px-1 text-gray-600 hover:text-purple-600">Additional Information</button>
+                    <button class="py-4 px-1 text-gray-600 hover:text-purple-600">Reviews (128)</button>
+                </nav>
+            </div>
+            <div class="py-8">
+                <h2 class="text-xl font-bold mb-4">Product Description</h2>
+                <p class="text-gray-600 mb-4">Our Premium Cotton T-Shirt is crafted with the finest organic cotton, ensuring both comfort and durability. The classic fit makes it versatile for any occasion, while the breathable fabric keeps you comfortable throughout the day.</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>100% organic cotton</li>
+                    <li>Classic fit</li>
+                    <li>Ribbed crew neck</li>
+                    <li>Pre-shrunk fabric</li>
+                    <li>Machine washable</li>
+                </ul>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="mt-12 border-t pt-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900">Customer Reviews</h2>
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">
+                        Write a Review
+                    </button>
+                </div>
+
+                <!-- Review Statistics -->
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                    <div class="md:w-1/3">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-gray-900 mb-2">4.5</div>
+                            <div class="flex justify-center text-yellow-400 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-gray-600">Based on 128 reviews</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <span class="text-sm text-gray-600 w-12">5 star</span>
+                                <div class="flex-1 h-4 mx-2 bg-gray-200 rounded">
+                                    <div class="w-3/4 h-full bg-yellow-400 rounded"></div>
+                                </div>
+                                <span class="text-sm text-gray-600 w-12">75%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm text-gray-600 w-12">4 star</span>
+                                <div class="flex-1 h-4 mx-2 bg-gray-200 rounded">
+                                    <div class="w-1/2 h-full bg-yellow-400 rounded"></div>
+                                </div>
+                                <span class="text-sm text-gray-600 w-12">50%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm text-gray-600 w-12">3 star</span>
+                                <div class="flex-1 h-4 mx-2 bg-gray-200 rounded">
+                                    <div class="w-1/4 h-full bg-yellow-400 rounded"></div>
+                                </div>
+                                <span class="text-sm text-gray-600 w-12">25%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm text-gray-600 w-12">2 star</span>
+                                <div class="flex-1 h-4 mx-2 bg-gray-200 rounded">
+                                    <div class="w-1/12 h-full bg-yellow-400 rounded"></div>
+                                </div>
+                                <span class="text-sm text-gray-600 w-12">8%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm text-gray-600 w-12">1 star</span>
+                                <div class="flex-1 h-4 mx-2 bg-gray-200 rounded">
+                                    <div class="w-1/24 h-full bg-yellow-400 rounded"></div>
+                                </div>
+                                <span class="text-sm text-gray-600 w-12">4%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Write Review Form -->
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Write a Review</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Rating</label>
+                            <div class="flex text-2xl text-gray-400 space-x-2">
+                                <button type="button" class="hover:text-yellow-400"><i class="far fa-star"></i></button>
+                                <button type="button" class="hover:text-yellow-400"><i class="far fa-star"></i></button>
+                                <button type="button" class="hover:text-yellow-400"><i class="far fa-star"></i></button>
+                                <button type="button" class="hover:text-yellow-400"><i class="far fa-star"></i></button>
+                                <button type="button" class="hover:text-yellow-400"><i class="far fa-star"></i></button>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="review-title">Review Title</label>
+                            <input type="text" id="review-title" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Give your review a title">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="review-text">Your Review</label>
+                            <textarea id="review-text" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Write your review here"></textarea>
+                        </div>
+                        <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">Submit Review</button>
+                    </form>
+                </div>
+
+                <!-- Customer Reviews List -->
+                <div class="space-y-6">
+                    <!-- Review 1 -->
+                    <div class="border-b pb-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Verified Purchase</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900">Perfect fit and great quality!</h4>
+                        <p class="text-gray-600 mt-2">This t-shirt exceeded my expectations. The material is soft, and the fit is exactly as described. I've washed it several times, and it still looks brand new.</p>
+                        <div class="flex items-center mt-4 text-sm text-gray-600">
+                            <span>By John D.</span>
+                            <span class="mx-2">•</span>
+                            <span>March 15, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="border-b pb-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Verified Purchase</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900">Great casual wear</h4>
+                        <p class="text-gray-600 mt-2">Very comfortable for everyday wear. The color is exactly as shown in the pictures. Would definitely buy more in different colors.</p>
+                        <div class="flex items-center mt-4 text-sm text-gray-600">
+                            <span>By Sarah M.</span>
+                            <span class="mx-2">•</span>
+                            <span>March 12, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="pb-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Verified Purchase</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-900">Good value for money</h4>
+                        <p class="text-gray-600 mt-2">Nice quality t-shirt at a reasonable price. The material is breathable and comfortable. Sizing runs true to size.</p>
+                        <div class="flex items-center mt-4 text-sm text-gray-600">
+                            <span>By Mike R.</span>
+                            <span class="mx-2">•</span>
+                            <span>March 10, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Load More Reviews Button -->
+                    <div class="text-center mt-8">
+                        <button class="text-purple-600 hover:text-purple-800 font-semibold">
+                            Load More Reviews
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">You May Also Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Related Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/300x300" alt="Related Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Casual V-Neck Tee</h3>
+                        <p class="text-gray-600 mt-2">$24.99</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Related Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/300x300" alt="Related Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Striped Polo Shirt</h3>
+                        <p class="text-gray-600 mt-2">$34.99</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Related Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/300x300" alt="Related Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Long Sleeve Tee</h3>
+                        <p class="text-gray-600 mt-2">$39.99</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Related Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/300x300" alt="Related Product" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Graphic Print Tee</h3>
+                        <p class="text-gray-600 mt-2">$27.99</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tab on Fashion</h3>
+                    <p class="text-gray-400">Your ultimate fashion destination</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="jobs.html" class="text-gray-400 hover:text-white">Jobs</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@tabonfashion.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Fashion St, Style City</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full">
+                        <button class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

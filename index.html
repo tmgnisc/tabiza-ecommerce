@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab on Fashion - Your Style Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .user-dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            width: 100%;
+            height: 10px;
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-purple-600">Tab on Fashion</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-purple-600 hover:text-purple-800">Home</a>
+                    <a href="shop.html" class="text-gray-600 hover:text-purple-600">Shop</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-purple-600">Blog</a>
+                    <a href="jobs.html" class="text-gray-600 hover:text-purple-600">Jobs</a>
+                    <a href="about.html" class="text-gray-600 hover:text-purple-600">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-purple-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="w-48 px-4 py-1 rounded-full border focus:outline-none focus:border-purple-500">
+                    </div>
+                    <a href="cart.html" class="text-gray-600 hover:text-purple-600 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
+                    </a>
+                    <div class="relative user-dropdown">
+                        <button class="text-gray-600 hover:text-purple-600 p-2">
+                            <i class="fas fa-user text-xl"></i>
+                        </button>
+                        <div class="dropdown-menu absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                            <a href="login.html" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-sign-in-alt mr-2"></i>Login
+                            </a>
+                            <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-user-circle mr-2"></i>Profile
+                            </a>
+                            <a href="order-history.html" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-history mr-2"></i>Order History
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-purple-50 hover:text-purple-600">
+                                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-16">
+        <div class="relative bg-purple-100 h-[500px]">
+            <div class="max-w-7xl mx-auto px-4 py-24">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to Tab on Fashion</h1>
+                    <p class="text-xl text-gray-600 mb-8">Discover the latest trends in fashion</p>
+                    <a href="shop.html" class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-gray-900">Featured Products</h2>
+            <div class="flex space-x-4">
+                <select class="border rounded-lg px-4 py-2">
+                    <option>Sort by</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Latest</option>
+                </select>
+                <select class="border rounded-lg px-4 py-2">
+                    <option>Filter by</option>
+                    <option>Men</option>
+                    <option>Women</option>
+                    <option>Accessories</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://placehold.co/300x300" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Stylish T-Shirt</h3>
+                    <p class="text-gray-600 mt-2">$29.99</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://placehold.co/300x300" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Designer Jeans</h3>
+                    <p class="text-gray-600 mt-2">$79.99</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://placehold.co/300x300" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Casual Sneakers</h3>
+                    <p class="text-gray-600 mt-2">$89.99</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://placehold.co/300x300" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Summer Dress</h3>
+                    <p class="text-gray-600 mt-2">$59.99</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tab on Fashion</h3>
+                    <p class="text-gray-400">Your ultimate fashion destination</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="jobs.html" class="text-gray-400 hover:text-white">Jobs</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@tabonfashion.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Fashion St, Style City</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full">
+                        <button class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample featured products data
+        const featuredProducts = [
+            {
+                id: 1,
+                name: 'Stylish T-Shirt',
+                price: 29.99,
+                category: "Men",
+                image: 'https://placehold.co/300x300'
+            },
+            {
+                id: 2,
+                name: 'Designer Jeans',
+                price: 79.99,
+                category: "Men",
+                image: 'https://placehold.co/300x300'
+            },
+            {
+                id: 3,
+                name: 'Casual Sneakers',
+                price: 89.99,
+                category: "Accessories",
+                image: 'https://placehold.co/300x300'
+            },
+            {
+                id: 4,
+                name: 'Summer Dress',
+                price: 59.99,
+                category: "Women",
+                image: 'https://placehold.co/300x300'
+            }
+        ];
+
+        let currentSort = 'Sort by';
+        let currentFilter = 'Filter by';
+
+        // Sort handler
+        document.querySelector('select:first-of-type').addEventListener('change', (e) => {
+            currentSort = e.target.value;
+            updateProducts();
+        });
+
+        // Filter handler
+        document.querySelector('select:last-of-type').addEventListener('change', (e) => {
+            currentFilter = e.target.value;
+            updateProducts();
+        });
+
+        function updateProducts() {
+            let filteredProducts = [...featuredProducts];
+
+            // Apply category filter
+            if (currentFilter !== 'Filter by') {
+                filteredProducts = filteredProducts.filter(product => 
+                    product.category === currentFilter
+                );
+            }
+
+            // Apply sorting
+            switch(currentSort) {
+                case 'Price: Low to High':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'Price: High to Low':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'Latest':
+                    filteredProducts.sort((a, b) => b.id - a.id);
+                    break;
+            }
+
+            renderProducts(filteredProducts);
+        }
+
+        function renderProducts(products) {
+            const productsContainer = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4');
+            productsContainer.innerHTML = products.map(product => `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">${product.name}</h3>
+                        <p class="text-gray-600 mt-2">$${product.price}</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Add to Cart</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initial render
+        updateProducts();
+    </script>
+</body>
+</html> 
